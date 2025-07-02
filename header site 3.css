@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: color #f7f8fd;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.section-nav{
+    width: 100%;
+    background-color: #fff;
+    margin-top:1rem ;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px 0 rgba(99, 99, 99, 0.2);
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 10% 45% 25%;
+}
+.container{
+    max-width: 1300px ;
+    margin: 0 auto  ;
+}
+.d-flex{
+    display: flex;
+}
+.align-center{
+    align-items: center;
+}
+img{
+    width: 100%;
+}
+.left-nav{
+    height: 100%;
+}
+.box-img-logo{
+    min-width: 50px;
+    margin-right: 0.5rem;
+}
+.center-nav ul{
+    justify-content: space-between;
+    height: 100%;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.right-nav{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.group-icon{
+    gap: 2.5rem;
+    display: flex;
+    margin-right: 2rem;
+}
+.user-section{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+svg{
+    width: 20px;
+    height: 20px;
+}
+.profile-user{
+    width: 50px;
+    height: 50px;
+}
+.profile-user img{
+    border-radius: 100%;
+}
+.status-connection{
+    width: 67px;
+    background-color:#edfdfa ;
+    padding: 0.4rem;
+    border-radius: 3px;
+    text-align: center;
+    color: #1f927f;
+    border-radius: 3px;
+}
+.active{
+    background-image:linear-gradient(71deg,#3ac2ff 50%, #2f56ff) ;
+    color: #fff;
+    padding: 12px;
+    border-radius: 22px;
+    font-weight: bold;
+}
+@media screen and (max-width:999px){
+    .box-img-logo{
+        min-width: 50px;
+    }
+    .section-log{
+        font-size: 0.9rem;
+    }
+    .center-nav ul li a{
+        font-size: 0.8rem;
+    }
+    .active{
+        padding: 6px;
+    }
+    .group-icon a svg{
+        width: 13px;
+    }
+    .status-connection{
+        width: 57px;
+        padding: 0.2rem;
+        font-size: 0.8rem;
+    }
+    .profile-user{
+        width: 40px;
+        height: 40px;
+    }
+    .section-nav{
+        grid-template-columns:3% 42% 24%;
+    }
+    h3{
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width:768px){
+    .center-nav{
+        display: none;   
+    }
+    .list-nav-mobile{
+        position: fixed;
+        left: 0;
+        background-color: #fff;
+        height: 100%;
+        top: 0;
+        width: 200px;
+        transform: translateX(-350px);
+        transition: all 250ms ease-out;
+        padding: 2rem 0rem 2rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 2.5rem;
+        text-align: left;
+        overflow-x: hidden;
+    }
+    #toggle-nav:checked + label +   ul{
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+    }
+    #toggle-nav:checked + label span:first-child{
+        transform: rotate(127deg);
+        position: relative;
+        top: -4px;
+    }
+    #toggle-nav:checked + label span.line-mid {
+        transform: translateX(10px);
+        opacity: 0;
+    }
+    #toggle-nav:checked + label span:last-child{
+        position: relative;
+        top: -13px;
+        transform: rotate(58deg);
+    }
+
+    .line{
+        border-bottom: 2px solid;
+        width: 14px;
+        display: block;
+        margin-bottom: 3px;
+        transition: all 160ms ease-out;
+    }
+    .section-nav{
+        grid-template-columns:3% 89% 3%;
+    }
+    .lable-toggle-nav{
+        position: relative;
+        top: 21px;
+    }
+}
+@media screen and (min-width:768px){
+    .mobile-nav{
+        display: none;
+    }
+}
+.mobile-nav{
+    position: relative;
+    top: 50%;
+    margin-top: -8px;
+}
+@media screen and (max-width:500px) {
+    .box-img-logo{
+        min-width: 27px;
+    }
+    .section-log h3{
+        font-size: auto;
+        font-weight: bold;
+    }
+    .group-icon{
+        gap: 1.4rem;
+        display: flex;
+        margin-right: 1rem;
+    }
+}
+@media screen and (max-width:400px){
+    .status-connection{
+        width: 46px;
+        font-size: 0.5rem;
+    }
+    h3{
+        font-size: 0.5rem;
+    }
+    .section-nav{
+        padding: 1rem;
+    }
+    .profile-user img{
+        width: 30px;
+        margin-left: 0.1rem;
+    }
+    .user-section{
+        gap: 0;
+        
+    }
+    .lable-toggle-nav{
+        margin-right: 1.1rem
+    }
+}
